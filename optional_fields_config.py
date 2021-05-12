@@ -54,9 +54,9 @@ def parse_settings(sensor,sensor_conf_dict):
 
 
 
-
+# PRINTING OUT FAKE DATA 
 def mock_sensor_push(sensor,sensor_conf_dict):
-    
+    print(sensor)
     # FIXME: it has to be in lowercase
     output_items = sensor_conf_dict[sensor.lower()]
 
@@ -68,6 +68,10 @@ def mock_sensor_push(sensor,sensor_conf_dict):
             print(item,": 50%")
         elif(item == "timestamp" and output_items[item] == True):
             print(item,": 999999699999")
+        elif(item == "geolocation" and output_items[item] == True):
+            print(item,": lng 113.5 lat 23.5")
+
+
 
 if __name__ == "__main__":
 
@@ -82,5 +86,8 @@ if __name__ == "__main__":
     for sensor in sensors:
         parse_settings(sensor, sensor_conf_dict)
 
-    mock_sensor_push("DHT11", sensor_conf_dict)
+    mock_sensor_push("BME280", sensor_conf_dict)
+    print('\n')
+    mock_sensor_push("DHT22", sensor_conf_dict)
+    print('\n')
 
