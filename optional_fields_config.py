@@ -3,7 +3,7 @@
 #####################################
 
 from configparser import ConfigParser
-from utils import mock_data as md
+
 cf=ConfigParser(allow_no_value=True)
 
 
@@ -28,6 +28,8 @@ def get_sensor_list():
 def parse_settings(sensor,sensor_conf_dict):
     
     sensor_config_fields = cf.items(sensor.upper())
+
+
     # sensor_conf_dict[sensor]
     
     config_dict = {}

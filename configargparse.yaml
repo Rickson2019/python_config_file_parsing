@@ -1,0 +1,16 @@
+[DEVICES]
+sensors : {
+  DHT11,
+  DHT22
+  }
+
+[OUTPUT]
+DHT22 : {
+  timestamp : true,
+  geolocation : true
+  }
+
+ DHT11 : {
+  timestamp : false,
+  geolocation : true
+  }
