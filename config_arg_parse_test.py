@@ -73,16 +73,16 @@ if __name__ == "__main__":
 
     for item in sensor_conf.optional_output:
         sensor_conf = (item.replace("'","")
-                .replace('{','{{"')
-                .replace('}','"}}')
+                .replace('{','[{"')
+                .replace('}','"}]')
                 .replace(' ',"")
                 .replace('--',"")
                 .replace(':','":"')
                 .replace('=','":"')
                 .replace(',','"},{"')
-                .replace('"{{','{{')
-                .replace('}}"','}}'))
+                .replace('"[{','[{')
+                .replace('}]"','}]'))
 
         s = '{"' + sensor_conf + '}'
         print(eval(s))
-        print(s)
+        # print(s)
