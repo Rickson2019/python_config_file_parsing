@@ -51,25 +51,6 @@ if __name__ == "__main__":
 
     # print(type(sensor_conf.optional_output))
     print('\n')
-    # print(str(sensor_conf.optional_output)
-    # .replace(" ","")
-    # # .replace("{","")
-    # .replace("=",":")
-    # .replace("'","")
-    # .replace('"',"")
-    # .replace("[","")
-    # .replace(']',"")
-    # .split(','))
-
-    sensor_conf_str =(str(sensor_conf.optional_output)
-    .replace(" ","")
-    # .replace("{","")
-    .replace("=",":")
-    .replace("'","")
-    .replace('"',"")
-    .replace("[","")
-    .replace(']',"")
-    .split(','))
 
     for item in sensor_conf.optional_output:
         sensor_conf = (item.replace("'","")
@@ -84,5 +65,7 @@ if __name__ == "__main__":
                 .replace('}]"','}]'))
 
         s = '{"' + sensor_conf + '}'
+
+        sensor_conf_dict.append(eval(s))
         print(eval(s))
         # print(s)
