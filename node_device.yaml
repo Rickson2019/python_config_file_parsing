@@ -1,0 +1,12 @@
+
+
+
+[DHT22]
+
+[optional_output]{
+timestamp=true
+geolocation=true
+}
+
+
+
